@@ -1,0 +1,419 @@
+<mxfile host="Electron" modified="2026-11-25T14:20:00.000Z" agent="JobSuit" version="24.0.0" type="device">
+  <diagram id="jobsuit-activity-job-opportunity-input" name="Job Opportunity Input Workflow">
+    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="2120" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title Banner -->
+        <mxCell id="title_banner" value="&lt;b style=&quot;font-size:16px;color:#0F172A;&quot;&gt;JobSuit – Job Opportunity Input Workflow&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size:11px;color:#475569;&quot;&gt;UML Activity Diagram with User &amp;amp; System Swimlanes (Screenshot, URL Import &amp;amp; Manual Entry)&lt;/i&gt;" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1.5;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="1140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Swimlane: User -->
+        <mxCell id="lane_user" value="&lt;b style=&quot;font-size:14px;color:#1E3A8A;&quot;&gt;User (Job Seeker)&lt;/b&gt;" style="swimlane;startSize=36;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=2;rounded=0;fontColor=#1E3A8A;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="540" height="1950" as="geometry"/>
+        </mxCell>
+
+        <!-- Swimlane: JobSuit System -->
+        <mxCell id="lane_system" value="&lt;b style=&quot;font-size:14px;color:#065F46;&quot;&gt;JobSuit System&lt;/b&gt;" style="swimlane;startSize=36;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=2;rounded=0;fontColor=#065F46;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="600" height="1950" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_box" value="&lt;b&gt;UML Diagram Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803D&quot;&gt;&amp;bull; [Yes] / [Valid] Success Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#DC2626&quot;&gt;&amp;bull; [No] / [Invalid] Error Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#2563EB&quot;&gt;&amp;bull; Branch Selection Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#D97706&quot;&gt;&amp;bull; Inaccessible Fallback Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&amp;bull; Standard Control Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#713F12&quot;&gt;&amp;bull; &amp;lt;&amp;gt; Decision / Merge Node&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1.2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=10;fontColor=#334155;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="1850" width="220" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 1: INITIATION & METHOD SELECTION ================= -->
+        <!-- Initial Node -->
+        <mxCell id="node_start" value="" style="ellipse;fillColor=#0F172A;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="315" y="150" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 2. Open Job Opportunities Section -->
+        <mxCell id="act_open_jobs" value="Open Job Opportunities Section" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="210" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 3. Select How to Add Job Opportunity -->
+        <mxCell id="act_select_add" value="Select How to Add&#xa;Job Opportunity" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="285" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Merge Node for Method Selection (allows re-entry from URL inaccessible branch) -->
+        <mxCell id="merge_input_choice" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="360" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 4. Decision Node: Choose Input Method -->
+        <mxCell id="dec_input_method" value="Choose Input&#xa;Method" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="260" y="415" width="140" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= BRANCH A: SCREENSHOT UPLOAD ================= -->
+        <!-- User: Upload Screenshot -->
+        <mxCell id="act_upload_screenshot" value="Upload Job Advertisement&#xa;Screenshot" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="520" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Validate Uploaded Image -->
+        <mxCell id="act_validate_image" value="Validate Uploaded Image&#xa;(Format, Size &amp;amp; Integrity)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="520" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: Image Valid? -->
+        <mxCell id="dec_image_valid" value="Image valid&#xa;&amp;amp; readable?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="770" y="600" width="150" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Display Image Error -->
+        <mxCell id="act_err_image" value="Display Error Message &amp;amp;&#xa;Prompt Image Re-upload" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=1.8;fontColor=#991B1B;fontSize=10.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="608" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Perform OCR -->
+        <mxCell id="act_ocr_text" value="Perform OCR to Extract&#xa;Text from Image" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="695" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Identify Job Details (Branch A) -->
+        <mxCell id="act_identify_details_a" value="Identify Job Details &amp;amp;&#xa;Requirements from OCR Text" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="775" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= BRANCH B: URL IMPORT ================= -->
+        <!-- User: Enter URL -->
+        <mxCell id="act_enter_url" value="Enter Job Posting URL" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="880" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Validate URL -->
+        <mxCell id="act_validate_url" value="Validate Job Posting URL&#xa;(Format &amp;amp; Reachability)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="880" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: URL Valid? -->
+        <mxCell id="dec_url_valid" value="URL format&#xa;valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="770" y="960" width="150" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Display URL Error -->
+        <mxCell id="act_err_url" value="Display Error Message &amp;amp;&#xa;Prompt URL Re-entry" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=1.8;fontColor=#991B1B;fontSize=10.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="580" y="968" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Retrieve Job Content -->
+        <mxCell id="act_retrieve_content" value="Attempt to Retrieve Publicly&#xa;Accessible Job Posting Content" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1055" width="230" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: Content Retrieved Successfully? -->
+        <mxCell id="dec_content_retrieved" value="Content retrieved&#xa;successfully?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="770" y="1140" width="150" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Inform Content Inaccessible & Offer Alternatives -->
+        <mxCell id="act_inform_inaccessible" value="Inform User Content Inaccessible &amp;amp;&#xa;Offer Screenshot Upload or Manual Entry" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.8;fontColor=#92400E;fontSize=10.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="955" y="1145" width="230" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Extract Job Details (Branch B) -->
+        <mxCell id="act_extract_details_b" value="Extract Job Details &amp;amp;&#xa;Requirements from Web Content" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1235" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= BRANCH C: MANUAL ENTRY ================= -->
+        <!-- User: Enter Details Manually -->
+        <mxCell id="act_enter_manual" value="Enter Job Details Manually&#xa;(Title, Company, Description,&#xa;Required Skills &amp;amp; Qualifications)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="170" y="1330" width="240" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Receive Manually Entered Information -->
+        <mxCell id="act_receive_manual" value="Receive Manually Entered&#xa;Job Information" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1337" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= MERGE NODE FOR 3 INPUT BRANCHES ================= -->
+        <mxCell id="merge_branches" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="830" y="1430" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= COMMON WORKFLOW ================= -->
+        <!-- 5. System: Display Extracted/Entered Information -->
+        <mxCell id="act_display_info" value="Display Extracted or Entered&#xa;Job Information in Review Form" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1495" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Merge Node for Review Loop -->
+        <mxCell id="merge_review" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="275" y="1575" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 6. User: Review Job Details -->
+        <mxCell id="act_review_details" value="Review Job Details &amp;amp;&#xa;Requirements" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1635" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 7. Decision: Information Correct & Complete? -->
+        <mxCell id="dec_info_correct" value="Is information&#xa;correct &amp;amp;&#xa;complete?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="1715" width="140" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- User: Edit / Correct Information -->
+        <mxCell id="act_edit_details" value="Edit or Correct&#xa;Job Details" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=1.8;fontColor=#9F1239;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1722" width="120" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 8. User: Confirm Job Information -->
+        <mxCell id="act_confirm_job" value="Confirm Job Information" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.8;fontColor=#065F46;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="180" y="1815" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 9. System: Save Confirmed Opportunity -->
+        <mxCell id="act_save_job" value="Save Confirmed Job Opportunity&#xa;to System Database" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1815" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 10. System: Display Success Message -->
+        <mxCell id="act_success_msg" value="Display Successful Job-Saving&#xa;Confirmation Message" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.8;fontColor=#065F46;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="730" y="1895" width="230" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 11. Final Node -->
+        <mxCell id="node_final" value="" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#0F172A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="828" y="1975" width="34" height="34" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= CONNECTORS / TRANSITIONS ================= -->
+        <!-- Start -> Open Jobs -->
+        <mxCell id="e_start_open" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="node_start" target="act_open_jobs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Open Jobs -> Select How to Add -->
+        <mxCell id="e_open_select" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_open_jobs" target="act_select_add" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Select How to Add -> Merge Input Choice -->
+        <mxCell id="e_select_mergechoice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_select_add" target="merge_input_choice" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Merge Input Choice -> Decision Choose Method -->
+        <mxCell id="e_merge_decchoice" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="merge_input_choice" target="dec_input_method" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: Branch A [Screenshot Upload] -->
+        <mxCell id="e_dec_branch_a" value="[Screenshot Upload]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="dec_input_method" target="act_upload_screenshot" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Upload Screenshot -> Validate Image (Cross swimlanes) -->
+        <mxCell id="e_upload_validate_img" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" edge="1" source="act_upload_screenshot" target="act_validate_image" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Validate Image -> Decision Image Valid -->
+        <mxCell id="e_validate_dec_img" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_validate_image" target="dec_image_valid" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Image Valid [No] -> Display Error -->
+        <mxCell id="e_dec_img_no" value="[Invalid]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="dec_image_valid" target="act_err_image" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display Image Error -> Retry Upload (Loop back to Upload Screenshot) -->
+        <mxCell id="e_err_img_retry" value="Re-upload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontSize=10.5;exitX=0;exitY=0.5;entryX=1;entryY=0.3;" edge="1" source="act_err_image" target="act_upload_screenshot" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="633"/>
+              <mxPoint x="490" y="535"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Image Valid [Yes] -> Perform OCR -->
+        <mxCell id="e_dec_img_yes" value="[Valid]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="dec_image_valid" target="act_ocr_text" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Perform OCR -> Identify Details A -->
+        <mxCell id="e_ocr_identify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_ocr_text" target="act_identify_details_a" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: Branch B [URL Import] -->
+        <mxCell id="e_dec_branch_b" value="[URL Import]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" source="dec_input_method" target="act_enter_url" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="448"/>
+              <mxPoint x="130" y="850"/>
+              <mxPoint x="290" y="850"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Enter URL -> Validate URL (Cross swimlanes) -->
+        <mxCell id="e_url_validate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;exitX=1;exitY=0.7;entryX=0;entryY=0.7;" edge="1" source="act_enter_url" target="act_validate_url" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Validate URL -> Decision URL Valid -->
+        <mxCell id="e_validate_dec_url" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_validate_url" target="dec_url_valid" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision URL Valid [No] -> Display URL Error -->
+        <mxCell id="e_dec_url_no" value="[Invalid]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="dec_url_valid" target="act_err_url" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display URL Error -> Re-enter URL (Loop back to Enter URL) -->
+        <mxCell id="e_err_url_retry" value="Re-enter" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontSize=10.5;exitX=0;exitY=0.5;entryX=1;entryY=0.3;" edge="1" source="act_err_url" target="act_enter_url" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="490" y="993"/>
+              <mxPoint x="490" y="895"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision URL Valid [Yes] -> Retrieve Content -->
+        <mxCell id="e_dec_url_yes" value="[Valid]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="dec_url_valid" target="act_retrieve_content" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Retrieve Content -> Decision Content Retrieved -->
+        <mxCell id="e_retrieve_dec_content" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_retrieve_content" target="dec_content_retrieved" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Content Retrieved [Yes] -> Extract Details B -->
+        <mxCell id="e_dec_content_yes" value="[Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="dec_content_retrieved" target="act_extract_details_b" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Content Retrieved [No] -> Inform Inaccessible -->
+        <mxCell id="e_dec_content_no" value="[No]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="dec_content_retrieved" target="act_inform_inaccessible" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Inform Inaccessible -> Fallback to Input Selection (Merge Input Choice) -->
+        <mxCell id="e_inform_fallback" value="Offer Screenshot or Manual" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontStyle=1;fontSize=10;exitX=0.5;exitY=0;entryX=1;entryY=0.5;" edge="1" source="act_inform_inaccessible" target="merge_input_choice" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1070" y="375"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision: Branch C [Manual Entry] -->
+        <mxCell id="e_dec_branch_c" value="[Manual Entry]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" source="dec_input_method" target="act_enter_manual" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="448"/>
+              <mxPoint x="95" y="1300"/>
+              <mxPoint x="290" y="1300"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Enter Manual -> Receive Manual (Cross swimlanes) -->
+        <mxCell id="e_manual_receive" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;" edge="1" source="act_enter_manual" target="act_receive_manual" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Branch A -> Merge Branches (along side channel) -->
+        <mxCell id="e_branch_a_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=1;entryY=0.5;" edge="1" source="act_identify_details_a" target="merge_branches" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="845" y="850"/>
+              <mxPoint x="1000" y="850"/>
+              <mxPoint x="1000" y="1445"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Branch B -> Merge Branches -->
+        <mxCell id="e_branch_b_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="act_extract_details_b" target="merge_branches" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Branch C -> Merge Branches -->
+        <mxCell id="e_branch_c_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0;entryY=0.5;" edge="1" source="act_receive_manual" target="merge_branches" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="845" y="1410"/>
+              <mxPoint x="800" y="1410"/>
+              <mxPoint x="800" y="1445"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Merge Branches -> Display Info -->
+        <mxCell id="e_merge_display" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="merge_branches" target="act_display_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display Info -> Merge Review (Cross swimlanes) -->
+        <mxCell id="e_display_mergereview" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=1.5;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="act_display_info" target="merge_review" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="1520"/>
+              <mxPoint x="540" y="1590"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Merge Review -> Review Details -->
+        <mxCell id="e_mergereview_review" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="merge_review" target="act_review_details" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Review Details -> Decision Info Correct -->
+        <mxCell id="e_review_decinfo" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_review_details" target="dec_info_correct" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Info Correct [No] -> Edit Details -->
+        <mxCell id="e_dec_info_no" value="[No]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="dec_info_correct" target="act_edit_details" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Edit Details -> Merge Review (Loop back to Review) -->
+        <mxCell id="e_edit_mergereview" value="Re-review" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontSize=10.5;exitX=0.5;exitY=0;entryX=0;entryY=0.5;" edge="1" source="act_edit_details" target="merge_review" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="1590"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Info Correct [Yes] -> Confirm Job -->
+        <mxCell id="e_dec_info_yes" value="[Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="dec_info_correct" target="act_confirm_job" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Confirm Job -> Save Job (Cross swimlanes) -->
+        <mxCell id="e_confirm_save" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=1.8;" edge="1" source="act_confirm_job" target="act_save_job" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Save Job -> Success Message -->
+        <mxCell id="e_save_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_save_job" target="act_success_msg" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Success Message -> Final Node -->
+        <mxCell id="e_msg_final" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_success_msg" target="node_final" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
