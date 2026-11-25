@@ -1,0 +1,258 @@
+<mxfile host="Electron" modified="2026-11-25T15:10:00.000Z" agent="JobSuit" version="24.0.0" type="device">
+  <diagram id="jobsuit-activity-job-compatibility-analysis" name="Job Compatibility Analysis Workflow">
+    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1260" pageHeight="1850" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title Banner -->
+        <mxCell id="title_banner" value="&lt;b style=&quot;font-size:16px;color:#0F172A;&quot;&gt;JobSuit – Job Compatibility Analysis Workflow&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size:11px;color:#475569;&quot;&gt;UML Activity Diagram with User &amp;amp; System Swimlanes (Profile-to-Job Matching &amp;amp; Explainable Compatibility Report)&lt;/i&gt;" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1.5;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="30" width="1140" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Swimlane: User -->
+        <mxCell id="lane_user" value="&lt;b style=&quot;font-size:14px;color:#1E3A8A;&quot;&gt;User (Job Seeker)&lt;/b&gt;" style="swimlane;startSize=36;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=2;rounded=0;fontColor=#1E3A8A;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="540" height="1700" as="geometry"/>
+        </mxCell>
+
+        <!-- Swimlane: JobSuit System -->
+        <mxCell id="lane_system" value="&lt;b style=&quot;font-size:14px;color:#065F46;&quot;&gt;JobSuit System&lt;/b&gt;" style="swimlane;startSize=36;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=2;rounded=0;fontColor=#065F46;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="600" height="1700" as="geometry"/>
+        </mxCell>
+
+        <!-- Scoring Model Callout Box -->
+        <mxCell id="callout_scoring" value="&lt;b&gt;Scoring Model Formula&lt;/b&gt;&lt;br&gt;&lt;i&gt;Rule-Based (SRS §5)&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;S = 0.4K + 0.2E + 0.2W + 0.2P&lt;/b&gt;&lt;br&gt;&amp;bull; &lt;b&gt;K:&lt;/b&gt; Skills (40%)&lt;br&gt;&amp;bull; &lt;b&gt;E:&lt;/b&gt; Education (20%)&lt;br&gt;&amp;bull; &lt;b&gt;W:&lt;/b&gt; Experience (20%)&lt;br&gt;&amp;bull; &lt;b&gt;P:&lt;/b&gt; Projects (20%)&lt;br&gt;&lt;font color=&quot;#1E40AF&quot;&gt;&lt;b&gt;Score: 0–100 Scale&lt;/b&gt;&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=1.3;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=10;fontColor=#0F172A;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="890" width="160" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- Business Rules Callout Box -->
+        <mxCell id="callout_rules" value="&lt;b&gt;Important Business Rules (SRS §5.3)&lt;/b&gt;&lt;br&gt;&amp;bull; Missing info in CV must not automatically imply lack of ability.&lt;br&gt;&amp;bull; System must never fabricate qualifications, skills or experience.&lt;br&gt;&amp;bull; Only confirmed profile and job data are utilised in analysis.&lt;br&gt;&amp;bull; Compatibility score reflects documented alignment, not hiring probability.&lt;br&gt;&amp;bull; Ambiguous items are marked &quot;Needs Verification&quot; rather than assumed." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.3;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=10;fontColor=#78350F;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="625" y="1490" width="345" height="155" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_box" value="&lt;b&gt;UML Diagram Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803D&quot;&gt;&amp;bull; [Yes] Success Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#DC2626&quot;&gt;&amp;bull; [No] Missing Data Loop&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#2563EB&quot;&gt;&amp;bull; User Interaction Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#059669&quot;&gt;&amp;bull; System Processing Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&amp;bull; Standard Control Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#713F12&quot;&gt;&amp;bull; &amp;lt;&amp;gt; Decision / Merge Node&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1.2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=10;fontColor=#334155;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="990" y="1490" width="195" height="155" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 1: INITIATION ================= -->
+        <!-- Initial Node -->
+        <mxCell id="node_start" value="" style="ellipse;fillColor=#0F172A;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="315" y="150" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- User: Open Job Opportunities Section -->
+        <mxCell id="act_open_jobs" value="Open Job Opportunities Section" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="210" width="240" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- User: Select Saved Job Opportunity -->
+        <mxCell id="act_select_job" value="Select Saved Job Opportunity" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="285" width="240" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- User: Select Analyse Compatibility -->
+        <mxCell id="act_click_analyse" value="Select &quot;Analyse Compatibility&quot;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="360" width="240" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Merge Node for Analysis Initiation / Correction Loop -->
+        <mxCell id="merge_analysis_entry" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E2E8F0;strokeColor=#475569;strokeWidth=1.8;" vertex="1" parent="1">
+          <mxGeometry x="315" y="440" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 2: SYSTEM VALIDATION ================= -->
+        <!-- System: Retrieve Data -->
+        <mxCell id="act_retrieve_data" value="Retrieve User's Confirmed Profile &amp;&#xa;Selected Job's Confirmed Requirements" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="740" y="430" width="260" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: Data Available? -->
+        <mxCell id="dec_data_available" value="Are both profile &amp;&#xa;job requirements&#xa;available?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="785" y="520" width="170" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Display Missing Info Error -->
+        <mxCell id="act_display_missing_msg" value="Display Missing Info Message &amp;&#xa;Offer Profile / Job Update Action" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=1.8;fontColor=#991B1B;fontSize=10.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="585" y="527" width="165" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- User: Complete / Update Missing Info -->
+        <mxCell id="act_user_update_info" value="Provide &amp; Confirm Missing Profile&#xa;Information or Job Requirements" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=1.8;fontColor=#9F1239;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="525" width="260" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 3: REQUIREMENT COMPARISON ================= -->
+        <!-- System: Identify Profile Info -->
+        <mxCell id="act_identify_profile_info" value="Identify Relevant Profile Information&#xa;(Skills, Education, Work Experience, Projects)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=11.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="630" width="270" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Compare Requirements -->
+        <mxCell id="act_compare_requirements" value="Compare Profile Information&#xa;Against Job Requirements" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="725" width="270" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Classify Requirements into 4 Categories -->
+        <mxCell id="act_classify_requirements" value="Classify Requirements into 4 Categories:&#xa;Matched, Partially Matched,&#xa;Not Evidenced, Needs Verification" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=11.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="725" y="815" width="290" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 4: SCORE CALCULATION ================= -->
+        <!-- System: Calculate Score -->
+        <mxCell id="act_calc_score" value="Calculate Compatibility Score using&#xa;Initial Rule-Based Weighted Model:&#xa;Score = 0.40K + 0.20E + 0.20W + 0.20P" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=11.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="725" y="910" width="290" height="65" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 5: GENERATE REPORT ================= -->
+        <!-- System: Identify Strengths -->
+        <mxCell id="act_identify_strengths" value="Identify Matching Qualifications&#xa;&amp; Key Profile Strengths" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1015" width="270" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Identify Skill Gaps -->
+        <mxCell id="act_identify_gaps" value="Identify Skill Gaps &amp; Requirements&#xa;Without Supporting CV Evidence" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1105" width="270" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Generate Report -->
+        <mxCell id="act_gen_report" value="Generate Compatibility Score &amp;&#xa;Explainable Analysis Report" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1195" width="270" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- System: Prepare Recommendations -->
+        <mxCell id="act_prep_recommendations" value="Prepare Relevant CV Improvement&#xa;Recommendations Based on Gaps" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1285" width="270" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SECTION 6: DISPLAY RESULTS & COMPLETION ================= -->
+        <!-- System: Display Results -->
+        <mxCell id="act_display_results" value="Display Compatibility Score, 4-Category&#xa;Classifications, Gaps &amp; Recommendations" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.8;fontColor=#065F46;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="735" y="1380" width="270" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- User: View Compatibility Analysis -->
+        <mxCell id="act_user_view_analysis" value="View Compatibility Analysis, Score&#xa;Breakdown &amp; Recommendations" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#1E3A8A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1455" width="260" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- Final Node -->
+        <mxCell id="node_final" value="" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#0F172A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="313" y="1560" width="34" height="34" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= CONNECTORS / TRANSITIONS ================= -->
+        <!-- Start -> Open Jobs -->
+        <mxCell id="e_start_open" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="node_start" target="act_open_jobs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Open Jobs -> Select Job -->
+        <mxCell id="e_open_selectjob" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_open_jobs" target="act_select_job" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Select Job -> Click Analyse -->
+        <mxCell id="e_select_analyse" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_select_job" target="act_click_analyse" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Click Analyse -> Merge Analysis Entry -->
+        <mxCell id="e_click_merge" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_click_analyse" target="merge_analysis_entry" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Merge Analysis Entry -> Retrieve Data (Cross swimlanes) -->
+        <mxCell id="e_merge_retrieve" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;" edge="1" source="merge_analysis_entry" target="act_retrieve_data" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Retrieve Data -> Decision Data Available -->
+        <mxCell id="e_retrieve_decdata" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_retrieve_data" target="dec_data_available" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision Data Available [No] -> Display Missing Message -->
+        <mxCell id="e_dec_data_no" value="[No]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="dec_data_available" target="act_display_missing_msg" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display Missing Message -> User Update Info (Cross swimlanes) -->
+        <mxCell id="e_msg_userupdate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;" edge="1" source="act_display_missing_msg" target="act_user_update_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- User Update Info -> Loop back to Merge Analysis Entry -->
+        <mxCell id="e_userupdate_loop" value="Missing Info Provided &amp; Confirmed" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontSize=10;exitX=0;exitY=0.5;entryX=0;entryY=0.5;" edge="1" source="act_user_update_info" target="merge_analysis_entry" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="552"/>
+              <mxPoint x="120" y="455"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Decision Data Available [Yes] -> Identify Profile Info -->
+        <mxCell id="e_dec_data_yes" value="[Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="dec_data_available" target="act_identify_profile_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Identify Profile Info -> Compare Requirements -->
+        <mxCell id="e_identify_compare" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_identify_profile_info" target="act_compare_requirements" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Compare Requirements -> Classify Requirements -->
+        <mxCell id="e_compare_classify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_compare_requirements" target="act_classify_requirements" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Classify Requirements -> Calculate Score -->
+        <mxCell id="e_classify_calc" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_classify_requirements" target="act_calc_score" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Calculate Score -> Identify Strengths -->
+        <mxCell id="e_calc_strengths" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_calc_score" target="act_identify_strengths" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Identify Strengths -> Identify Gaps -->
+        <mxCell id="e_strengths_gaps" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_identify_strengths" target="act_identify_gaps" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Identify Gaps -> Generate Report -->
+        <mxCell id="e_gaps_genreport" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_identify_gaps" target="act_gen_report" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Generate Report -> Prepare Recommendations -->
+        <mxCell id="e_genreport_recommendations" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_gen_report" target="act_prep_recommendations" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Prepare Recommendations -> Display Results -->
+        <mxCell id="e_recommendations_display" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_prep_recommendations" target="act_display_results" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display Results -> User View Analysis (Cross swimlanes) -->
+        <mxCell id="e_display_userview" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=1.8;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="act_display_results" target="act_user_view_analysis" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="1407"/>
+              <mxPoint x="540" y="1482"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- User View Analysis -> Final Node -->
+        <mxCell id="e_userview_final" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_user_view_analysis" target="node_final" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
