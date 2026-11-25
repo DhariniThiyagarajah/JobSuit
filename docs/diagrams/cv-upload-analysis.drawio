@@ -1,0 +1,239 @@
+﻿<mxfile host="Electron" modified="2026-11-25T14:00:00.000Z" agent="JobSuit" version="24.0.0" type="device">
+  <diagram id="jobsuit-activity-cv-upload" name="CV Upload and Analysis Workflow">
+    <mxGraphModel dx="1400" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1650" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title Banner -->
+        <mxCell id="title_banner" value="&lt;b style=&quot;font-size:16px;color:#0F172A;&quot;&gt;JobSuit – CV Upload and Analysis Workflow&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size:11px;color:#475569;&quot;&gt;UML Activity Diagram with User &amp;amp; System Swimlanes&lt;/i&gt;" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1.5;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="30" width="1020" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Swimlane: User -->
+        <mxCell id="lane_user" value="&lt;b style=&quot;font-size:14px;color:#1E3A8A;&quot;&gt;User (Job Seeker)&lt;/b&gt;" style="swimlane;startSize=36;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=2;rounded=0;fontColor=#1E3A8A;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="460" height="1470" as="geometry"/>
+        </mxCell>
+
+        <!-- Swimlane: JobSuit System -->
+        <mxCell id="lane_system" value="&lt;b style=&quot;font-size:14px;color:#065F46;&quot;&gt;JobSuit System&lt;/b&gt;" style="swimlane;startSize=36;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=2;rounded=0;fontColor=#065F46;fontStyle=1;fontSize=13;align=center;" vertex="1" parent="1">
+          <mxGeometry x="540" y="100" width="560" height="1470" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_box" value="&lt;b&gt;Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#15803D&quot;&gt;&amp;bull; [Yes] Success Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#DC2626&quot;&gt;&amp;bull; [No] Error / Exception&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#334155&quot;&gt;&amp;bull; Control Flow&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1.2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontSize=10.5;fontColor=#334155;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="930" y="1120" width="150" height="85" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= USER ACTIVITIES ================= -->
+        <!-- Initial Node -->
+        <mxCell id="node_start" value="" style="ellipse;fillColor=#0F172A;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="295" y="160" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- 2. Open CV Management -->
+        <mxCell id="act_open_cv" value="Open CV Management Section" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="225" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 3. Select and Upload CV -->
+        <mxCell id="act_upload_cv" value="Select and Upload CV File&#xa;(PDF or DOCX)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="315" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- Alternate path: Enter Profile Details Manually -->
+        <mxCell id="act_manual_entry" value="Enter Profile Details&#xa;Manually" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEF3C7;strokeColor=#D97706;strokeWidth=1.8;fontColor=#92400E;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="210" y="740" width="190" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 10. Review Extracted Information -->
+        <mxCell id="act_review_info" value="Review Extracted Information&#xa;(Skills, Experience, Education)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#2563EB;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="205" y="940" width="210" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 11. Decision 3: Information Correct? -->
+        <mxCell id="dec_info_correct" value="Is extracted&#xa;information&#xa;correct?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1035" width="140" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- Edit / Correct Information -->
+        <mxCell id="act_edit_info" value="Edit or Correct&#xa;Information" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#E11D48;strokeWidth=1.8;fontColor=#9F1239;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="100" y="1150" width="160" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 12. Confirm Information -->
+        <mxCell id="act_confirm_info" value="Confirm and Submit&#xa;Information" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.8;fontColor=#065F46;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="1255" width="180" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= SYSTEM ACTIVITIES ================= -->
+        <!-- 4. Validate File -->
+        <mxCell id="act_validate_file" value="Validate Uploaded File&#xa;(Format, Size &amp;amp; Integrity)" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="720" y="315" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 5. Decision 1: Valid Format & File? -->
+        <mxCell id="dec_file_valid" value="Format valid&#xa;(PDF/DOCX)&#xa;&amp;amp; readable?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="745" y="410" width="150" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- Error: Display Invalid Format Error -->
+        <mxCell id="act_err_invalid_file" value="Display Error Message&#xa;&amp;amp; Prompt File Re-upload" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=1.8;fontColor=#991B1B;fontSize=11.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="560" y="422" width="165" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 6. Extract Readable Text -->
+        <mxCell id="act_extract_text" value="Extract Readable Text&#xa;from CV Document" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="720" y="525" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 7. Decision 2: Text Extracted Successfully? -->
+        <mxCell id="dec_text_success" value="Text successfully&#xa;extracted?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FEF9C3;strokeColor=#CA8A04;strokeWidth=1.8;fontColor=#713F12;fontSize=11;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="745" y="620" width="150" height="75" as="geometry"/>
+        </mxCell>
+
+        <!-- Inform Extraction Failure & Offer Manual Entry -->
+        <mxCell id="act_inform_failure" value="Inform User of Failure &amp;amp;&#xa;Offer Manual Profile Entry" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FEE2E2;strokeColor=#DC2626;strokeWidth=1.8;fontColor=#991B1B;fontSize=11.5;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="545" y="740" width="180" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 8. Identify Skills, Education, Experience -->
+        <mxCell id="act_parse_entities" value="Identify Potential Skills,&#xa;Education, Experience &amp;amp; Projects" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="715" y="740" width="210" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 9. Display Extracted Information -->
+        <mxCell id="act_display_info" value="Display Extracted Information&#xa;in Review Interface" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="720" y="840" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- 13. Save Confirmed Information -->
+        <mxCell id="act_save_profile" value="Save Confirmed Information&#xa;in User Professional Profile" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#059669;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="715" y="1255" width="210" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 14. Display Completion Message -->
+        <mxCell id="act_success_msg" value="Display Successful&#xa;Completion Message" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=1.8;fontColor=#065F46;fontSize=12;fontStyle=1;align=center;" vertex="1" parent="1">
+          <mxGeometry x="725" y="1350" width="190" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- 15. Final Node -->
+        <mxCell id="node_final" value="" style="ellipse;html=1;shape=endState;fillColor=#0F172A;strokeColor=#0F172A;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="803" y="1445" width="34" height="34" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= CONNECTORS / TRANSITIONS ================= -->
+        <!-- Start -> Open CV -->
+        <mxCell id="e_start_open" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="node_start" target="act_open_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Open CV -> Upload CV -->
+        <mxCell id="e_open_upload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_open_cv" target="act_upload_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Upload CV -> Validate File (Across Swimlanes) -->
+        <mxCell id="e_upload_validate" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;" edge="1" source="act_upload_cv" target="act_validate_file" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Validate File -> Decision 1 -->
+        <mxCell id="e_validate_dec1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_validate_file" target="dec_file_valid" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision 1 [No] -> Display Error -->
+        <mxCell id="e_dec1_err" value="[No]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;" edge="1" source="dec_file_valid" target="act_err_invalid_file" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display Error -> Retry Upload (Loop back to Upload CV) -->
+        <mxCell id="e_err_retry" value="Retry" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontSize=11;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="act_err_invalid_file" target="act_upload_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision 1 [Yes] -> Extract Text -->
+        <mxCell id="e_dec1_extract" value="[Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;" edge="1" source="dec_file_valid" target="act_extract_text" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Extract Text -> Decision 2 -->
+        <mxCell id="e_extract_dec2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_extract_text" target="dec_text_success" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision 2 [No] -> Inform Failure -->
+        <mxCell id="e_dec2_inform" value="[No]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;" edge="1" source="dec_text_success" target="act_inform_failure" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Inform Failure -> Manual Entry (Across Swimlanes) -->
+        <mxCell id="e_inform_manual" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D97706;strokeWidth=1.5;" edge="1" source="act_inform_failure" target="act_manual_entry" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Manual Entry -> Confirm Info -->
+        <mxCell id="e_manual_confirm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#D97706;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.2;entryY=0;" edge="1" source="act_manual_entry" target="act_confirm_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision 2 [Yes] -> Parse Entities -->
+        <mxCell id="e_dec2_parse" value="[Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;" edge="1" source="dec_text_success" target="act_parse_entities" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Parse Entities -> Display Info -->
+        <mxCell id="e_parse_display" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_parse_entities" target="act_display_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Display Info -> Review Info (Across Swimlanes) -->
+        <mxCell id="e_display_review" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=1.5;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="act_display_info" target="act_review_info" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="867"/>
+              <mxPoint x="580" y="967"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Review Info -> Decision 3 -->
+        <mxCell id="e_review_dec3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_review_info" target="dec_info_correct" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision 3 [No] -> Edit Info -->
+        <mxCell id="e_dec3_edit" value="[No]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DC2626;strokeWidth=1.5;fontColor=#DC2626;fontStyle=1;fontSize=11;" edge="1" source="dec_info_correct" target="act_edit_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Edit Info -> Confirm Info -->
+        <mxCell id="e_edit_confirm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;exitX=0.5;exitY=1;entryX=0.3;entryY=0;" edge="1" source="act_edit_info" target="act_confirm_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision 3 [Yes] -> Confirm Info -->
+        <mxCell id="e_dec3_confirm" value="[Yes]" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#15803D;fontStyle=1;fontSize=11;exitX=0.5;exitY=1;entryX=0.7;entryY=0;" edge="1" source="dec_info_correct" target="act_confirm_info" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Confirm Info -> Save Profile (Across Swimlanes) -->
+        <mxCell id="e_confirm_save" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#059669;strokeWidth=1.8;" edge="1" source="act_confirm_info" target="act_save_profile" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Save Profile -> Success Msg -->
+        <mxCell id="e_save_msg" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_save_profile" target="act_success_msg" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Success Msg -> Final Node -->
+        <mxCell id="e_msg_final" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#334155;strokeWidth=1.5;" edge="1" source="act_success_msg" target="node_final" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

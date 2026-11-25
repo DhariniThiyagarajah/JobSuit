@@ -1,0 +1,209 @@
+﻿<mxfile host="Electron" modified="2026-11-25T13:42:00.000Z" agent="JobSuit" version="24.0.0" type="device">
+  <diagram id="jobsuit-use-case" name="JobSuit UML Use Case Diagram">
+    <mxGraphModel dx="1600" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1350" pageHeight="1620" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- System Boundary -->
+        <mxCell id="sys_boundary" value="&lt;b style=&quot;font-size:16px;color:#0F172A;&quot;&gt;JobSuit System&lt;/b&gt;" style="swimlane;startSize=40;horizontal=1;swimlaneFillColor=#FFFFFF;fillColor=#F8FAFC;strokeColor=#334155;strokeWidth=2;rounded=1;arcSize=4;fontColor=#0F172A;fontStyle=1;fontSize=15;align=center;" vertex="1" parent="1">
+          <mxGeometry x="220" y="40" width="1070" height="1520" as="geometry"/>
+        </mxCell>
+
+        <!-- Primary Actor: Job Seeker -->
+        <mxCell id="actor_job_seeker" value="&lt;b&gt;Job Seeker&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Primary Actor)&lt;/i&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;strokeWidth=2;fillColor=#DBEAFE;strokeColor=#1E40AF;fontColor=#0F172A;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="740" width="60" height="110" as="geometry"/>
+        </mxCell>
+
+        <!-- Legend Box -->
+        <mxCell id="legend_box" value="&lt;b&gt;UML Diagram Legend&lt;/b&gt;&lt;br&gt;&lt;br&gt;&amp;mdash;&amp;mdash; Association (Job Seeker)&lt;br&gt;&lt;font color=&quot;#2563EB&quot;&gt;- - - &amp;gt; &amp;lt;&amp;lt;include&amp;gt;&amp;gt; (Mandatory)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#D97706&quot;&gt;- - - &amp;gt; &amp;lt;&amp;lt;extend&amp;gt;&amp;gt; (Optional)&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1.2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontSize=11;fontColor=#334155;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="50" width="220" height="95" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= GROUP 1: ACCOUNT MANAGEMENT ================= -->
+        <mxCell id="group_account" value="&lt;b&gt;Account Management&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.5;dashed=1;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontStyle=1;fontSize=13;fontColor=#1E40AF;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="1010" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_register" value="Register Account" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="150" width="170" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_login" value="Login" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="170" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_manage_account" value="Manage Account" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="750" y="150" width="180" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= GROUP 2: CV MANAGEMENT ================= -->
+        <mxCell id="group_cv" value="&lt;b&gt;CV Management&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#10B981;strokeWidth=1.5;dashed=1;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontStyle=1;fontSize=13;fontColor=#065F46;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="285" width="1010" height="235" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_upload_cv" value="Upload CV" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="335" width="170" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_extract_cv" value="Extract CV Information" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="535" y="335" width="185" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_review_extracted_cv" value="Review Extracted CV Information" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="785" y="335" width="220" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_manage_profile" value="Manage Professional Profile" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="425" width="200" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= GROUP 3: JOB OPPORTUNITY MANAGEMENT ================= -->
+        <mxCell id="group_jobs" value="&lt;b&gt;Job Opportunity Management&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FEFCE8;strokeColor=#F59E0B;strokeWidth=1.5;dashed=1;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontStyle=1;fontSize=13;fontColor=#92400E;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="540" width="1010" height="315" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_manage_jobs" value="Manage Job Opportunities" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="585" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_enter_job_manual" value="Enter Job Details Manually" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="650" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_upload_job_screenshot" value="Upload Job Screenshot" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="715" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_import_job_url" value="Import Job Using URL" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="780" width="200" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_review_extracted_job" value="Review Extracted Job Information" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="650" y="745" width="225" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= GROUP 4: JOB COMPATIBILITY ANALYSIS ================= -->
+        <mxCell id="group_analysis" value="&lt;b&gt;Job Compatibility Analysis&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FAF5FF;strokeColor=#8B5CF6;strokeWidth=1.5;dashed=1;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontStyle=1;fontSize=13;fontColor=#5B21B6;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="875" width="1010" height="205" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_analyse_compatibility" value="Analyse Job Compatibility" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="935" width="205" height="60" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_view_compat_score" value="View Compatibility Score" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="575" y="900" width="195" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_view_match_results" value="View Matching Results" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="575" y="980" width="195" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_view_skill_gaps" value="View Skill Gaps" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="835" y="980" width="180" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= GROUP 5: CV IMPROVEMENT ================= -->
+        <mxCell id="group_cv_improve" value="&lt;b&gt;CV Improvement&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFF1F2;strokeColor=#F43F5E;strokeWidth=1.5;dashed=1;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontStyle=1;fontSize=13;fontColor=#9F1239;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1100" width="1010" height="205" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_view_recommendations" value="View CV Recommendations" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1145" width="210" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_accept_reject" value="Accept or Reject Recommendations" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1145" width="235" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_customise_cv" value="Customise CV" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1225" width="190" height="55" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_download_customised_cv" value="Download Customised CV" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1225" width="210" height="55" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= GROUP 6: APPLICATION MANAGEMENT ================= -->
+        <mxCell id="group_application" value="&lt;b&gt;Application Management&lt;/b&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#14B8A6;strokeWidth=1.5;dashed=1;verticalAlign=top;align=left;spacingLeft=15;spacingTop=10;fontStyle=1;fontSize=13;fontColor=#115E59;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="1325" width="1010" height="195" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_view_dashboard" value="View Dashboard" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1370" width="180" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_record_application" value="Record Job Application" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="530" y="1370" width="195" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_update_status" value="Update Application Status" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="290" y="1445" width="195" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="uc_manage_interview" value="Manage Interview Details" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#0284C7;strokeWidth=1.8;fontColor=#0F172A;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="620" y="1445" width="205" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= ACTOR ASSOCIATIONS (SOLID LINES) ================= -->
+        <mxCell id="edge_assoc_register" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_register" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_login" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_login" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_manage_acc" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_manage_account" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_upload_cv" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_upload_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_manage_prof" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_manage_profile" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_manage_jobs" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_manage_jobs" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_enter_manual" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_enter_job_manual" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_upload_ss" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_upload_job_screenshot" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_import_url" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_import_job_url" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_analyse_compat" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_analyse_compatibility" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_view_rec" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_view_recommendations" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_customise_cv" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_customise_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_dashboard" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_view_dashboard" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_record_app" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_record_application" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_assoc_update_status" style="edgeStyle=straight;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;" edge="1" source="actor_job_seeker" target="uc_update_status" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= <<include>> RELATIONSHIPS ================= -->
+        <mxCell id="edge_inc_cv_extract" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontSize=11;fontStyle=2;" edge="1" source="uc_upload_cv" target="uc_extract_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_inc_ss_review" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontSize=11;fontStyle=2;" edge="1" source="uc_upload_job_screenshot" target="uc_review_extracted_job" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_inc_url_review" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontSize=11;fontStyle=2;" edge="1" source="uc_import_job_url" target="uc_review_extracted_job" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_inc_score" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontSize=11;fontStyle=2;" edge="1" source="uc_analyse_compatibility" target="uc_view_compat_score" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_inc_results" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#1D4ED8;fontSize=11;fontStyle=2;" edge="1" source="uc_analyse_compatibility" target="uc_view_match_results" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= <<extend>> RELATIONSHIPS ================= -->
+        <mxCell id="edge_ext_cv_review" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontSize=11;fontStyle=2;" edge="1" source="uc_review_extracted_cv" target="uc_extract_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_ext_skill_gaps" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontSize=11;fontStyle=2;" edge="1" source="uc_view_skill_gaps" target="uc_view_match_results" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_ext_accept_reject" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontSize=11;fontStyle=2;" edge="1" source="uc_accept_reject" target="uc_view_recommendations" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_ext_download_cv" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontSize=11;fontStyle=2;" edge="1" source="uc_download_customised_cv" target="uc_customise_cv" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_ext_manage_interview" value="&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;dashed=1;endArrow=open;endSize=8;strokeColor=#D97706;strokeWidth=1.5;fontColor=#B45309;fontSize=11;fontStyle=2;" edge="1" source="uc_manage_interview" target="uc_update_status" parent="1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
