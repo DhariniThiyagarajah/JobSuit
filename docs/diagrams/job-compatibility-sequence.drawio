@@ -1,0 +1,400 @@
+<mxfile host="Electron" modified="2026-11-26T15:50:00.000Z" agent="JobSuit" version="24.0.0" type="device">
+  <diagram id="jobsuit-sequence-job-compatibility" name="Job Compatibility Analysis Sequence">
+    <mxGraphModel dx="2200" dy="1650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2060" pageHeight="1620" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title Banner -->
+        <mxCell id="title_banner" value="&lt;b style=&quot;font-size:16px;color:#0F172A;&quot;&gt;JobSuit – Job Compatibility Analysis Sequence Diagram&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size:11px;color:#475569;&quot;&gt;UML 2.5 Sequence Diagram: End-to-End Compatibility Matching, Verification, Rule-Based Scoring &amp;amp; Recommendation Workflow&lt;/i&gt;" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#CBD5E1;strokeWidth=1.5;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="25" width="1940" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Phase Badges -->
+        <mxCell id="badge_phase_a" value="&lt;b&gt;Phase A – Request Initiation&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#3B82F6;strokeWidth=1.2;fontColor=#1E40AF;fontSize=10.5;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="152" width="180" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="badge_phase_b" value="&lt;b&gt;Phase B – Authentication &amp;amp; Authorization&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.2;fontColor=#6D28D9;fontSize=10.5;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="242" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="badge_phase_c" value="&lt;b&gt;Phase C – Retrieve Required Information&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.2;fontColor=#B45309;fontSize=10.5;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="532" width="240" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="badge_phase_d" value="&lt;b&gt;Phase D – Requirement Comparison &amp;amp; Scoring&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.2;fontColor=#1D4ED8;fontSize=10.5;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="852" width="265" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="badge_phase_e" value="&lt;b&gt;Phase E – Recommendations&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.2;fontColor=#0F766E;fontSize=10.5;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1067" width="180" height="24" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="badge_phase_f" value="&lt;b&gt;Phase F – Save &amp;amp; Display Results&lt;/b&gt;" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=1.2;fontColor=#15803D;fontSize=10.5;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1192" width="195" height="24" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= PARTICIPANTS & LIFELINES ================= -->
+        <!-- 1. Job Seeker (Actor) -->
+        <mxCell id="p1" value="Job Seeker&#xa;(Job Seeker)" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#EFF6FF;strokeColor=#1E40AF;strokeWidth=1.5;fontColor=#1E3A8A;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="95" width="100" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 2. React Frontend -->
+        <mxCell id="p2" value="&lt;b&gt;:React Frontend&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#0369A1;&quot;&gt;SPA Client&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="290" y="95" width="150" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 3. Spring Boot REST API -->
+        <mxCell id="p3" value="&lt;b&gt;:Spring Boot REST API&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#15803D;&quot;&gt;CompatibilityController&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#F0FDF4;strokeColor=#16A34A;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="540" y="95" width="160" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 4. Authentication Service -->
+        <mxCell id="p4" value="&lt;b&gt;:Authentication Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#6D28D9;&quot;&gt;Spring Security &amp;amp; JWT&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="95" width="160" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 5. Profile & Job Service -->
+        <mxCell id="p5" value="&lt;b&gt;:Profile &amp;amp; Job Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#B45309;&quot;&gt;Profile &amp;amp; Job Management&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="95" width="160" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 6. Rule-Based Matching Engine -->
+        <mxCell id="p6" value="&lt;b&gt;:Rule-Based Matching Engine&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#1D4ED8;&quot;&gt;Weighted Scoring (SRS §5)&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="95" width="180" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 7. Recommendation Service -->
+        <mxCell id="p7" value="&lt;b&gt;:Recommendation Service&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#0F766E;&quot;&gt;Truthful CV Improvements&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#F0FDFA;strokeColor=#0D9488;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1550" y="95" width="165" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- 8. PostgreSQL Database -->
+        <mxCell id="p8" value="&lt;b&gt;:PostgreSQL Database&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px;color:#334155;&quot;&gt;Relational Data Store&lt;/font&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwestPortConstraint;size=50;fillColor=#F8FAFC;strokeColor=#334155;strokeWidth=1.5;fontColor=#0F172A;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="1800" y="95" width="150" height="1320" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= ACTIVATION BARS ================= -->
+        <mxCell id="act_p2_init" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#BAE6FD;strokeColor=#0284C7;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="180" width="10" height="50" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p3_main" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#BBF7D0;strokeColor=#16A34A;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="615" y="225" width="10" height="1080" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p4_auth" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#DDD6FE;strokeColor=#7C3AED;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="855" y="270" width="10" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p2_err1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FECACA;strokeColor=#DC2626;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="415" width="10" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p5_load" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FDE68A;strokeColor=#D97706;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1105" y="560" width="10" height="125" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p8_read" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E2E8F0;strokeColor=#334155;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="600" width="10" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p2_err2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#FEF08A;strokeColor=#CA8A04;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="740" width="10" height="35" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p6_match" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#BFDBFE;strokeColor=#2563EB;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1365" y="880" width="10" height="180" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p7_recs" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#99F6E4;strokeColor=#0D9488;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1627" y="1095" width="10" height="90" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p8_write" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#E2E8F0;strokeColor=#334155;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="1870" y="1220" width="10" height="45" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="act_p2_render" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#BAE6FD;strokeColor=#0284C7;strokeWidth=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="1300" width="10" height="85" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= ALT COMBINED FRAGMENT 1: AUTHENTICATION ================= -->
+        <mxCell id="alt_frame_auth" value="alt&lt;br&gt;&lt;i style=&quot;font-size:10px;&quot;&gt;[Authentication &amp;amp; Authorization Decision]&lt;/i&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=230;height=28;fontStyle=1;fontSize=11;fillColor=#FEF2F2;strokeColor=#EF4444;strokeWidth=1.5;align=left;spacingLeft=10;fontColor=#991B1B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="860" height="145" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cond_auth_invalid" value="&lt;b&gt;[Invalid or Expired JWT Token / Unauthorized Access]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#DC2626;" vertex="1" parent="1">
+          <mxGeometry x="65" y="402" width="300" height="16" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="alt1_sep" value="&lt;b&gt;[Authenticated &amp;amp; Authorized]&lt;/b&gt;" style="line;strokeWidth=1.2;dashed=1;labelPosition=right;align=left;spacingLeft=15;fontSize=10;fontStyle=1;fontColor=#15803D;strokeColor=#EF4444;" vertex="1" parent="1">
+          <mxGeometry x="60" y="465" width="860" height="10" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= ALT COMBINED FRAGMENT 2: INFORMATION AVAILABILITY ================= -->
+        <mxCell id="alt_frame_info" value="alt&lt;br&gt;&lt;i style=&quot;font-size:10px;&quot;&gt;[Information Availability Decision]&lt;/i&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;width=190;height=28;fontStyle=1;fontSize=11;fillColor=#FFFBEB;strokeColor=#F59E0B;strokeWidth=1.5;align=left;spacingLeft=10;fontColor=#92400E;" vertex="1" parent="1">
+          <mxGeometry x="60" y="705" width="1120" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cond_info_missing" value="&lt;b&gt;[Profile or Job Requirements Missing / Unconfirmed]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#D97706;" vertex="1" parent="1">
+          <mxGeometry x="65" y="727" width="310" height="16" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="alt2_sep" value="&lt;b&gt;[All Required Information Confirmed &amp;amp; Available]&lt;/b&gt;" style="line;strokeWidth=1.2;dashed=1;labelPosition=right;align=left;spacingLeft=15;fontSize=10;fontStyle=1;fontColor=#15803D;strokeColor=#F59E0B;" vertex="1" parent="1">
+          <mxGeometry x="60" y="788" width="1120" height="10" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= PHASE A: MESSAGES ================= -->
+        <mxCell id="msg_1" value="1: Select saved job &amp;amp; click &quot;Analyse Compatibility&quot;" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#1E40AF;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="130" y="180" as="sourcePoint"/>
+            <mxPoint x="360" y="180" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_2" value="2: POST /api/compatibility/analyse/{jobId} [Bearer JWT]" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#0284C7;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="225" as="sourcePoint"/>
+            <mxPoint x="615" y="225" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= PHASE B: MESSAGES ================= -->
+        <mxCell id="msg_3" value="3: validateTokenAndAuthorize(token, userId, jobId)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="270" as="sourcePoint"/>
+            <mxPoint x="855" y="270" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_4" value="4: verifySignature(), checkExpiration(), verifyOwnership()" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#7C3AED;strokeWidth=1.2;fontSize=10.5;fontColor=#4C1D95;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="865" y="300" as="sourcePoint"/>
+            <mxPoint x="865" y="330" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="930" y="300"/>
+              <mxPoint x="930" y="330"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_5" value="5: authResult(status=VALID, userId, role=USER)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#7C3AED;strokeWidth=1.5;fontSize=11;fontColor=#4C1D95;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="855" y="355" as="sourcePoint"/>
+            <mxPoint x="625" y="355" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_alt1_err1" value="HTTP 401 Unauthorized {&quot;error&quot;: &quot;Invalid/Expired Token&quot;}" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#DC2626;strokeWidth=1.5;fontSize=10.5;fontColor=#991B1B;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="615" y="420" as="sourcePoint"/>
+            <mxPoint x="370" y="420" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_alt1_err2" value="Display session expired notification &amp;amp; prompt login" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#DC2626;strokeWidth=1.5;fontSize=10.5;fontColor=#991B1B;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="445" as="sourcePoint"/>
+            <mxPoint x="130" y="445" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_alt1_ok" value="Proceed with verified user session" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.2;fontSize=10.5;fontColor=#14532D;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="488" as="sourcePoint"/>
+            <mxPoint x="625" y="513" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="675" y="488"/>
+              <mxPoint x="675" y="513"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= PHASE C: MESSAGES ================= -->
+        <mxCell id="msg_6" value="6: getConfirmedProfileAndJob(userId, jobId)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="560" as="sourcePoint"/>
+            <mxPoint x="1105" y="560" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_7" value="7: SELECT confirmed profile, skills, education, work_exp, projects &amp;amp; job_requirements" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#D97706;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1115" y="600" as="sourcePoint"/>
+            <mxPoint x="1870" y="600" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_8" value="8: return ProfileDataEntity &amp;amp; JobOpportunityEntity" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#334155;strokeWidth=1.5;fontSize=11;fontColor=#334155;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1870" y="640" as="sourcePoint"/>
+            <mxPoint x="1115" y="640" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_9" value="9: return ConfirmedProfileJobDTO (or missing status)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#D97706;strokeWidth=1.5;fontSize=11;fontColor=#92400E;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1105" y="680" as="sourcePoint"/>
+            <mxPoint x="625" y="680" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_alt2_err1" value="HTTP 422 Unprocessable Entity {&quot;error&quot;: &quot;Missing confirmed profile or job requirements&quot;}" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#D97706;strokeWidth=1.5;fontSize=10.5;fontColor=#92400E;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="615" y="742" as="sourcePoint"/>
+            <mxPoint x="370" y="742" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_alt2_err2" value="Display validation prompt: Complete / confirm missing profile or job details (no analysis)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#D97706;strokeWidth=1.5;fontSize=10.5;fontColor=#92400E;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="768" as="sourcePoint"/>
+            <mxPoint x="130" y="768" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_alt2_ok" value="Validate confirmed data completeness; Proceed to matching" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.2;fontSize=10.5;fontColor=#14532D;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="808" as="sourcePoint"/>
+            <mxPoint x="625" y="833" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="675" y="808"/>
+              <mxPoint x="675" y="833"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= PHASE D: MESSAGES ================= -->
+        <mxCell id="msg_10" value="10: executeCompatibilityAnalysis(confirmedProfile, jobRequirements)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="880" as="sourcePoint"/>
+            <mxPoint x="1365" y="880" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_11" value="11: compareRequirements(skills, education, experience, projects)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#2563EB;strokeWidth=1.2;fontSize=10.5;fontColor=#1E40AF;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1375" y="915" as="sourcePoint"/>
+            <mxPoint x="1375" y="945" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1455" y="915"/>
+              <mxPoint x="1455" y="945"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_12" value="12: classifyRequirements(Matched, Partially Matched, Not Evidenced, Needs Verification)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#2563EB;strokeWidth=1.2;fontSize=10.5;fontColor=#1E40AF;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1375" y="960" as="sourcePoint"/>
+            <mxPoint x="1375" y="990" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1455" y="960"/>
+              <mxPoint x="1455" y="990"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_13" value="13: calculateWeightedScore() -&gt; S = 0.40K + 0.20E + 0.20W + 0.20P [Scale 0–100]" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#2563EB;strokeWidth=1.2;fontSize=10.5;fontColor=#1E40AF;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1375" y="1005" as="sourcePoint"/>
+            <mxPoint x="1375" y="1035" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1455" y="1005"/>
+              <mxPoint x="1455" y="1035"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_14" value="14: return CompatibilityAnalysisResult(score, classifications, gapDetails)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#2563EB;strokeWidth=1.5;fontSize=11;fontColor=#1E40AF;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1365" y="1055" as="sourcePoint"/>
+            <mxPoint x="625" y="1055" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= PHASE E: MESSAGES ================= -->
+        <mxCell id="msg_15" value="15: generateRecommendations(matchResults, identifiedGaps)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="1095" as="sourcePoint"/>
+            <mxPoint x="1627" y="1095" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_16" value="16: generateTruthfulSuggestions() [BR-007, BR-008: No fabrication, missing != lack of skill]" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#0D9488;strokeWidth=1.2;fontSize=10.5;fontColor=#115E59;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1637" y="1130" as="sourcePoint"/>
+            <mxPoint x="1637" y="1160" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1715" y="1130"/>
+              <mxPoint x="1715" y="1160"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_17" value="17: return CVImprovementRecommendationsList" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#0D9488;strokeWidth=1.5;fontSize=11;fontColor=#115E59;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1627" y="1180" as="sourcePoint"/>
+            <mxPoint x="625" y="1180" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= PHASE F: MESSAGES ================= -->
+        <mxCell id="msg_18" value="18: INSERT / UPDATE compatibility_report (job_id, user_id, score, classifications, recommendations)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#16A34A;strokeWidth=1.5;fontSize=11;fontColor=#0F172A;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="1220" as="sourcePoint"/>
+            <mxPoint x="1870" y="1220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_19" value="19: confirmPersistenceSuccess(reportId, status=SAVED)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#334155;strokeWidth=1.5;fontSize=11;fontColor=#334155;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1870" y="1260" as="sourcePoint"/>
+            <mxPoint x="625" y="1260" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_20" value="20: HTTP 200 OK (CompatibilityReportDTO with score, breakdowns &amp;amp; recommendations)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#16A34A;strokeWidth=1.5;fontSize=11;fontColor=#14532D;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="615" y="1300" as="sourcePoint"/>
+            <mxPoint x="370" y="1300" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_21" value="21: renderReportUI(compatibilityScore, 4-tier categories, explainable gaps, CV tips)" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;dashed=0;strokeColor=#0284C7;strokeWidth=1.2;fontSize=10.5;fontColor=#0369A1;align=left;spacingLeft=5;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="1330" as="sourcePoint"/>
+            <mxPoint x="370" y="1360" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="435" y="1330"/>
+              <mxPoint x="435" y="1360"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg_22" value="22: Display Explainable Compatibility Report &amp;amp; Improvement Dashboard" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;dashed=1;strokeColor=#0284C7;strokeWidth=1.5;fontSize=11;fontColor=#0369A1;align=center;verticalAlign=bottom;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="1380" as="sourcePoint"/>
+            <mxPoint x="130" y="1380" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ================= BOTTOM CALLOUT BOXES ================= -->
+        <mxCell id="callout_legend" value="&lt;b style=&quot;font-size:12px;color:#0F172A;&quot;&gt;UML Sequence Legend&lt;/b&gt;&lt;br&gt;&lt;font color=&quot;#1E40AF&quot;&gt;&amp;bull; &lt;b&gt;Solid Arrow:&lt;/b&gt; Synchronous Request / Invocation&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#0F766E&quot;&gt;&amp;bull; &lt;b&gt;Dashed Arrow:&lt;/b&gt; Reply / Return Message&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#4338CA&quot;&gt;&amp;bull; &lt;b&gt;Reflexive Arrow:&lt;/b&gt; Self-Call / Internal Logic Execution&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#991B1B&quot;&gt;&amp;bull; &lt;b&gt;alt Frame:&lt;/b&gt; Conditional Alternative Branch (UML 2.5)&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#15803D&quot;&gt;&amp;bull; &lt;b&gt;Green Path:&lt;/b&gt; Successful Processing &amp;amp; Persistence Flow&lt;/font&gt;&lt;br&gt;&lt;font color=&quot;#DC2626&quot;&gt;&amp;bull; &lt;b&gt;Red/Amber Path:&lt;/b&gt; Error / Missing Data Early Exit Flow&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#94A3B8;strokeWidth=1.3;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=10;fontColor=#334155;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1435" width="460" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="callout_rules" value="&lt;b style=&quot;font-size:12px;color:#78350F;&quot;&gt;Important Business Rules (SRS §5.3 &amp;amp; §7)&lt;/b&gt;&lt;br&gt;&amp;bull; &lt;b&gt;Authentication &amp;amp; Privacy:&lt;/b&gt; Only authenticated users can request analysis; users access only their own records (BR-002, NFR-003).&lt;br&gt;&amp;bull; &lt;b&gt;Confirmed Data Only:&lt;/b&gt; Only user-confirmed profile details and job requirements are utilised in analysis (BR-005, BR-013).&lt;br&gt;&amp;bull; &lt;b&gt;No Negative Inference:&lt;/b&gt; Missing CV evidence must not automatically imply a lack of ability (BR-007).&lt;br&gt;&amp;bull; &lt;b&gt;Truthfulness Guarantee:&lt;/b&gt; System must never invent or fabricate qualifications, skills or experience (BR-008).&lt;br&gt;&amp;bull; &lt;b&gt;Documented Alignment:&lt;/b&gt; The compatibility score represents documented alignment, not a prediction of hiring probability.&lt;br&gt;&amp;bull; &lt;b&gt;Transparent Reasoning:&lt;/b&gt; Ambiguous items are marked &quot;Needs Verification&quot; rather than assumed to be true or false." style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=1.3;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=10;fontColor=#78350F;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1435" width="940" height="140" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="callout_scoring" value="&lt;b style=&quot;font-size:12px;color:#0F172A;&quot;&gt;Scoring Model Formula (SRS §5)&lt;/b&gt;&lt;br&gt;&lt;i style=&quot;font-size:10px;color:#475569;&quot;&gt;Initial Rule-Based Weighted Algorithm&lt;/i&gt;&lt;br&gt;&lt;br&gt;&lt;b style=&quot;font-size:13px;color:#1E40AF;&quot;&gt;S = 0.40K + 0.20E + 0.20W + 0.20P&lt;/b&gt;&lt;br&gt;&amp;bull; &lt;b&gt;K:&lt;/b&gt; Skills (40% weight)&lt;br&gt;&amp;bull; &lt;b&gt;E:&lt;/b&gt; Education (20% weight)&lt;br&gt;&amp;bull; &lt;b&gt;W:&lt;/b&gt; Work Experience (20% weight)&lt;br&gt;&amp;bull; &lt;b&gt;P:&lt;/b&gt; Academic &amp;amp; Proj (20% weight)&lt;br&gt;&lt;font color=&quot;#15803D&quot;&gt;&lt;b&gt;Output Scale: 0–100&lt;/b&gt; | 4 Categorised Tiers&lt;/font&gt;" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#F0F9FF;strokeColor=#0284C7;strokeWidth=1.3;verticalAlign=top;align=left;spacingLeft=10;spacingTop=8;fontSize=10;fontColor=#0F172A;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="1435" width="500" height="140" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
